@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        gagalin: ['Gagalin', 'cursive'], // ab jetzt: font-gagalin
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

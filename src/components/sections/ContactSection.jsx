@@ -45,7 +45,7 @@ export function ContactSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0,
       },
     },
   }
@@ -56,7 +56,7 @@ export function ContactSection() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   }
@@ -68,7 +68,7 @@ export function ContactSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="mx-auto mb-16 max-w-2xl text-center"
           ref={ref}
         >
@@ -98,9 +98,9 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium">Adresse</p>
                     <p className="text-muted-foreground">
-                      Innovationsstraße 42
+                      Marktplatz 32
                       <br />
-                      10115 Berlin
+                      72250 Freudenstadt
                       <br />
                       Deutschland
                     </p>

@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Cloud, Cpu, Brain, Code, Rocket, Lock } from 'lucide-react'
+import { Wrench, RefreshCw, Smartphone, Zap, ArrowRightLeft, PuzzleIcon as PuzzlePiece } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/Card"
 
 export function SolutionsSection() {
@@ -9,40 +9,40 @@ export function SolutionsSection() {
 
   const solutions = [
     {
-      icon: <Cloud className="h-10 w-10" />,
-      title: "Cloud-Integration",
+      icon: <Wrench className="h-10 w-10" />,
+      title: "Reparatur defekter Websites",
       description:
-        "Nahtlose Integration von Cloud-Diensten für maximale Skalierbarkeit und Flexibilität Ihrer IT-Infrastruktur.",
+        "Behebung von 404-Fehlern, Ladeproblemen und technischen Störungen, um Ihre Website wieder voll funktionsfähig zu machen.",
     },
     {
-      icon: <Cpu className="h-10 w-10" />,
-      title: "Automatisierung",
+      icon: <RefreshCw className="h-10 w-10" />,
+      title: "Aktualisierung von Abhängigkeiten",
       description:
-        "Optimieren Sie Ihre Geschäftsprozesse durch intelligente Automatisierungslösungen und steigern Sie Ihre Effizienz.",
+        "Aktualisierung von Bibliotheken, Frameworks und CMS-Systemen, um Sicherheit und Kompatibilität zu gewährleisten.",
     },
     {
-      icon: <Brain className="h-10 w-10" />,
-      title: "Künstliche Intelligenz",
+      icon: <Smartphone className="h-10 w-10" />,
+      title: "Responsive Design",
       description:
-        "Nutzen Sie das Potenzial von KI und Machine Learning für datengestützte Entscheidungen und innovative Anwendungen.",
+        "Optimierung Ihrer Website für mobile Endgeräte, damit Ihre Inhalte auf allen Bildschirmgrößen perfekt dargestellt werden.",
     },
     {
-      icon: <Code className="h-10 w-10" />,
-      title: "Web- & App-Entwicklung",
+      icon: <Zap className="h-10 w-10" />,
+      title: "Performance-Optimierung",
       description:
-        "Maßgeschneiderte Entwicklung von Webanwendungen und mobilen Apps mit modernsten Technologien und Frameworks.",
+        "Steigerung der Ladegeschwindigkeit und Verbesserung der allgemeinen Performance Ihrer Website für ein besseres Nutzererlebnis.",
     },
     {
-      icon: <Rocket className="h-10 w-10" />,
-      title: "Digitale Transformation",
+      icon: <ArrowRightLeft className="h-10 w-10" />,
+      title: "Migrationen",
       description:
-        "Umfassende Strategien zur digitalen Transformation Ihres Unternehmens für langfristigen Erfolg im digitalen Zeitalter.",
+        "Umstellung von veralteten Technologien wie jQuery auf moderne Frameworks wie React oder Migration von Legacy-CMS auf aktuelle Plattformen.",
     },
     {
-      icon: <Lock className="h-10 w-10" />,
-      title: "Cybersicherheit",
+      icon: <PuzzlePiece className="h-10 w-10" />,
+      title: "Kleine Erweiterungen",
       description:
-        "Schützen Sie Ihre digitalen Assets mit fortschrittlichen Sicherheitslösungen und proaktiven Schutzmaßnahmen.",
+        "Implementierung neuer Blöcke, Formulare, SEO-Verbesserungen und Design-Anpassungen, um Ihre Website kontinuierlich zu verbessern.",
     },
   ]
 
@@ -51,7 +51,7 @@ export function SolutionsSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0,
       },
     },
   }
@@ -62,7 +62,7 @@ export function SolutionsSection() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   }
@@ -74,7 +74,7 @@ export function SolutionsSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="mx-auto mb-16 max-w-2xl text-center"
           ref={ref}
         >
@@ -83,8 +83,8 @@ export function SolutionsSection() {
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Lösungen</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Wir bieten innovative IT-Lösungen, die Ihr Unternehmen auf die nächste Stufe bringen. Entdecken Sie unsere
-            Dienstleistungen, die auf Ihre individuellen Bedürfnisse zugeschnitten sind.
+            Wir bieten spezialisierte Dienstleistungen zur Wartung, Optimierung und Erweiterung Ihrer Website. Entdecken
+            Sie unsere maßgeschneiderten Lösungen für Ihre individuellen Anforderungen.
           </p>
         </motion.div>
 

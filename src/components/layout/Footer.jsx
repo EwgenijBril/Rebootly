@@ -24,7 +24,7 @@ export function Footer() {
   return (
     <footer className="relative border-t border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-4">
             <div className="flex items-center space-x-2 text-2xl font-bold">
               <span className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-primary to-secondary before:absolute before:inset-0 before:animate-pulse before:bg-gradient-to-br before:from-primary/50 before:to-secondary/50 before:blur-xl">
@@ -78,82 +78,36 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Navigation</h3>
-            <ul className="space-y-2">
-              <li>
-                <button
-                  onClick={() => scrollToSection("start")}
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                >
-                  Start
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("loesungen")}
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                >
-                  Lösungen
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("technologien")}
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                >
-                  Technologien
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("ueber-uns")}
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                >
-                  Über uns
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("kontakt")}
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                >
-                  Kontakt
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="mb-4 text-lg font-semibold">Lösungen</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Cloud-Integration
+                  Website-Reparatur
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Automatisierung
+                  System-Updates
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Künstliche Intelligenz
+                  Responsive Design
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Web- & App-Entwicklung
+                  Performance-Optimierung
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Digitale Transformation
+                  Technologie-Migration
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  Cybersicherheit
+                  Website-Erweiterungen
                 </a>
               </li>
             </ul>
@@ -170,11 +124,6 @@ export function Footer() {
               <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
                   Datenschutz
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
-                  AGB
                 </a>
               </li>
               <li>

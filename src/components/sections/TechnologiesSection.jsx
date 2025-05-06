@@ -1,20 +1,33 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import { FaReact, FaDocker, FaNodeJs, FaJava } from "react-icons/fa";
+import { SiMongodb, SiPostgresql, SiTypescript, SiNextdotjs } from "react-icons/si";
 
 export function TechnologiesSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
+  // const technologies = [
+  //   { name: "React", icon: "/placeholder.svg?height=60&width=60" },
+  //   { name: "Next.js", icon: "/placeholder.svg?height=60&width=60" },
+  //   { name: "TypeScript", icon: "/placeholder.svg?height=60&width=60" },
+  //   { name: "Node.js", icon: "/placeholder.svg?height=60&width=60" },
+  //   { name: "Java", icon: "/placeholder.svg?height=60&width=60" },
+  //   { name: "Docker", icon: "/placeholder.svg?height=60&width=60" },
+  //   { name: "PostgreSQL", icon: "/placeholder.svg?height=60&width=60" },
+  //   { name: "MongoDB", icon: "/placeholder.svg?height=60&width=60" },
+  // ]
+
   const technologies = [
-    { name: "React", icon: "/placeholder.svg?height=60&width=60" },
-    { name: "Next.js", icon: "/placeholder.svg?height=60&width=60" },
-    { name: "TypeScript", icon: "/placeholder.svg?height=60&width=60" },
-    { name: "Node.js", icon: "/placeholder.svg?height=60&width=60" },
-    { name: "Docker", icon: "/placeholder.svg?height=60&width=60" },
-    { name: "AWS", icon: "/placeholder.svg?height=60&width=60" },
-    { name: "Firebase", icon: "/placeholder.svg?height=60&width=60" },
-    { name: "MongoDB", icon: "/placeholder.svg?height=60&width=60" },
-  ]
+    { name: "React", icon: <FaReact />  },
+    { name: "Next.js", icon: <SiNextdotjs /> },
+    { name: "TypeScript", icon: <SiTypescript /> },
+    { name: "Node.js", icon: <FaNodeJs /> },
+    { name: "Java", icon: <FaJava /> },
+    { name: "Docker", icon: <FaDocker /> },
+    { name: "PostgreSQL", icon: <SiPostgresql /> },
+    { name: "MongoDB", icon: <SiMongodb /> },
+  ];
 
   const benefits = [
     {
@@ -39,7 +52,7 @@ export function TechnologiesSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0,
       },
     },
   }
@@ -50,7 +63,7 @@ export function TechnologiesSection() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   }
@@ -61,7 +74,7 @@ export function TechnologiesSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="mx-auto mb-16 max-w-2xl text-center"
           ref={ref}
         >
@@ -81,19 +94,17 @@ export function TechnologiesSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mb-16 grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-8"
+          className="mb-16 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-8"
         >
           {technologies.map((tech, index) => (
             <motion.div key={index} variants={itemVariants} className="flex flex-col items-center justify-center">
               <div className="group mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 p-4 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
-                <img
-                  src={tech.icon || "/placeholder.svg"}
-                  alt={tech.name}
-                  className="h-12 w-12 transition-transform duration-300 group-hover:scale-110"
-                />
+                <div className="text-4xl text-primary transition-transform duration-300 group-hover:scale-110">
+                  {tech.icon}
+                </div>
               </div>
               <span className="text-center text-sm font-medium">{tech.name}</span>
-            </motion.div>
+          </motion.div>
           ))}
         </motion.div>
 
@@ -104,7 +115,7 @@ export function TechnologiesSection() {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="grid gap-8 md:grid-cols-3"
+            className="grid gap-8 lg:grid-cols-3"
           >
             {benefits.map((benefit, index) => (
               <motion.div

@@ -42,8 +42,8 @@ export function Header({ activeSection = "start" }) {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
-        staggerChildren: 0.1,
+        duration: 0.2,
+        staggerChildren: 0,
         delayChildren: 0.2,
       },
     },
@@ -73,14 +73,14 @@ export function Header({ activeSection = "start" }) {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.2 }}
               className="flex items-center"
             >
               <span className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-primary to-secondary before:absolute before:inset-0 before:animate-pulse before:bg-gradient-to-br before:from-primary/50 before:to-secondary/50 before:blur-xl">
-                <span className="relative z-10 text-white p-1">R</span>
+                <span className="relative z-10 text-white p-1 font-gagalin">R</span>
               </span>
-              <span className="ml-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Rebootly
+              <span className="ml-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-extrabold">
+                REBOOTLY
               </span>
             </motion.div>
           </a>

@@ -41,7 +41,7 @@ export function AboutSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0,
       },
     },
   }
@@ -52,7 +52,7 @@ export function AboutSection() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   }
@@ -63,7 +63,7 @@ export function AboutSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="mx-auto mb-16 max-w-2xl text-center"
           ref={ref}
         >
@@ -76,11 +76,11 @@ export function AboutSection() {
           </p>
         </motion.div>
 
-        <div className="grid gap-16 md:grid-cols-2">
+        <div className="grid gap-16 xl:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0 }}
             className="relative"
           >
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-xl">
@@ -106,6 +106,8 @@ export function AboutSection() {
                 transformieren und ihnen einen Wettbewerbsvorteil in der digitalen Welt zu verschaffen. Unsere Expertise
                 und unser Engagement für Exzellenz treiben uns an, kontinuierlich die Grenzen des technologisch
                 Möglichen zu erweitern.
+
+                Unser Fokus liegt nicht auf der Erstellung neuer Webseiten, sondern auf der Optimierung bestehender Seiten – schnell, stabil und effizient
               </p>
             </motion.div>
 
@@ -113,7 +115,7 @@ export function AboutSection() {
               <h3 className="mb-4 text-2xl font-semibold">Unsere Werte</h3>
               <div className="grid gap-4 sm:grid-cols-3">
                 {values.map((value, index) => (
-                  <div key={index} className="rounded-lg bg-background/50 p-4 backdrop-blur-sm">
+                  <div key={index} className="rounded-lg bg-background/50 py-4 backdrop-blur-sm">
                     <h4 className="mb-2 font-medium text-primary">{value.title}</h4>
                     <p className="text-sm text-muted-foreground">{value.description}</p>
                   </div>
@@ -130,14 +132,14 @@ export function AboutSection() {
           className="mt-20"
         >
           <h3 className="mb-8 text-center text-2xl font-semibold">Was unsere Kunden sagen</h3>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 xl:grid-cols-2">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 className="relative rounded-xl border border-border/40 bg-background/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
               >
-                <Quote className="absolute -top-4 -left-4 h-8 w-8 rounded-full bg-gradient-to-r from-primary to-secondary p-1.5 text-white" />
+                <Quote className="absolute -top-5 -left-1 h-8 w-8 rounded-full bg-gradient-to-r from-primary to-secondary p-1.5 text-white" />
                 <p className="mb-4 text-muted-foreground">"{testimonial.quote}"</p>
                 <div>
                   <p className="font-medium">{testimonial.author}</p>

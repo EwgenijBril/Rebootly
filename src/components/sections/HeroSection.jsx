@@ -123,7 +123,7 @@ export function HeroSection() {
   return (
     <section id="start" className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
       <canvas ref={canvasRef} className="absolute inset-0 -z-10" style={{ opacity: 0.6 }} />
-      <div className="container relative z-10 px-4 py-32">
+      <div className="container relative z-10 px-4 py-20 2xl:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
