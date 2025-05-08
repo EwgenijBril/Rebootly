@@ -113,7 +113,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium">Telefon</p>
-                    <p className="text-muted-foreground">+49 30 1234567</p>
+                    <p className="text-muted-foreground">+49 176 64084993</p>
                   </div>
                 </div>
 
@@ -143,8 +143,26 @@ export function ContactSection() {
                 </div>
               </div>
               <div className="mt-4 flex space-x-4">
-                <Button className="flex-1 bg-[#25D366] text-white hover:bg-[#25D366]/90">WhatsApp</Button>
-                <Button className="flex-1 bg-[#0088cc] text-white hover:bg-[#0088cc]/90">Telegram</Button>
+                <a
+                  href="https://wa.me/4917664084993"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button className="w-full bg-[#25D366] text-white hover:bg-[#25D366]/90">
+                    WhatsApp
+                  </Button>
+                </a>
+                <a
+                  href="https://t.me/@Ewgen425"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button className="w-full bg-[#0088cc] text-white hover:bg-[#0088cc]/90">
+                    Telegram
+                  </Button>
+                </a>
               </div>
             </motion.div>
           </motion.div>
