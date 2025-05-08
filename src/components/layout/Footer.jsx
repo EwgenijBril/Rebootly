@@ -40,21 +40,8 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 text-primary transition-colors hover:text-secondary"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 text-primary transition-colors hover:text-secondary"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/ewgenij-bril/"
+                target="_blank"
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 text-primary transition-colors hover:text-secondary"
                 aria-label="LinkedIn"
               >
@@ -68,7 +55,8 @@ export function Footer() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://github.com/EwgenijBril"
+                target="_blank"
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 text-primary transition-colors hover:text-secondary"
                 aria-label="GitHub"
               >
@@ -117,12 +105,12 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Rechtliches</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
+                <a href="/imprint" className="text-muted-foreground transition-colors hover:text-primary">
                   Impressum
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
+                <a href="/data-protection" className="text-muted-foreground transition-colors hover:text-primary">
                   Datenschutz
                 </a>
               </li>
