@@ -28,7 +28,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 text-2xl font-bold">
               <span className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-primary to-secondary before:absolute before:inset-0 before:animate-pulse before:bg-gradient-to-br before:from-primary/50 before:to-secondary/50 before:blur-xl">
-                <span className="relative z-10 text-white font-gagalin">R</span>
+                <span className="relative z-10 text-white font-gagalin italic">R</span>
               </span>
               <span className="font-gagalin bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent italic">
                Rebootly
