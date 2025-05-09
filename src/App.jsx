@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import LandingPage from "./components/LandingPage"
 import DataProtection from ".//components/pages/DataProtection"
 import Imprint from "./components/pages/Imprint"
+import CookieBanner from "./components/sections/CookieBanner"
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
@@ -40,7 +41,12 @@ function App() {
     }
   }
 
-  return renderContent()
+  return (
+    <>
+      {renderContent()}
+      <CookieBanner />
+    </>
+  )
 }
 
 export default App

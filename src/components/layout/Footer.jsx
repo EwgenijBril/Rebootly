@@ -21,6 +21,27 @@ export function Footer() {
     })
   }
 
+  const navigateTo = (path) => {
+    if (window.navigate) {
+      window.navigate(path)
+    } else {
+      window.location.href = path
+    }
+  }
+
+  const openCookieSettings = () => {
+    // Wenn die Cookie-Einstellungen im localStorage vorhanden sind, diese laden
+    const storedConsent = localStorage.getItem("cookieConsent")
+
+    // Cookie-Banner-Komponente mitteilen, dass die Einstellungen geöffnet werden sollen
+    // Dies wird über ein Custom Event gemacht, damit die Komponenten unabhängig bleiben
+    window.dispatchEvent(
+      new CustomEvent("openCookieSettings", {
+        detail: storedConsent ? JSON.parse(storedConsent) : null,
+      }),
+    )
+  }
+
   return (
     <footer className="relative border-t border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container px-4 py-12">
@@ -115,10 +136,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <button
+                  onClick={openCookieSettings}
+                  className="text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Cookie-Einstellungen
+                </button>
+              </li>
+              {/* <li>
                 <a href="#" className="text-muted-foreground transition-colors hover:text-primary">
                   Cookie-Richtlinie
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
