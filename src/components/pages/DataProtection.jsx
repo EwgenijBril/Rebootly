@@ -44,7 +44,7 @@ export function DataProtection() {
                   <br />
                   Deutschland
                   <br />
-                  E-Mail: info@rebootly.de
+                  E-Mail: inforebootly@gmail.com
                 </p>
               </div>
             </section>
@@ -180,8 +180,8 @@ export function DataProtection() {
                 Bei Fragen zum Datenschutz können Sie sich jederzeit an uns wenden:
                 <br />
                 E-Mail:{" "}
-                <a href="mailto:ewgenijbril425@gmail.com" className="text-primary hover:underline">
-                    info@rebootly.de
+                <a href="mailto:inforebootly@gmail.com" className="text-primary hover:underline">
+                  inforebootly@gmail.com
                 </a>
               </p>
             </section>

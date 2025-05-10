@@ -46,8 +46,8 @@ export function Imprint() {
               <h2 className="mb-4 text-2xl font-semibold">Kontakt</h2>
               <p className="text-muted-foreground">
                 E-Mail:{" "}
-                <a href="mailto:ewgenijbril425@gmail.com" className="text-primary hover:underline">
-                    info@rebootly.de
+                <a href="mailto:inforebootly@gmail.com" className="text-primary hover:underline">
+                  inforebootly@gmail.com
                 </a>
                 <br />
                 +49 176 64084993
